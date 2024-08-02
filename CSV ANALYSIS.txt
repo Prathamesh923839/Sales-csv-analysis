@@ -1,0 +1,57 @@
+To proceed with the project, we need to:
+
+1. Identify potential tables and columns from the provided CSV file.
+2. Create SQL code to create the database and tables satisfying the given conditions.
+3. Load the CSV in Python and generate INSERT INTO statements, keeping table primary and foreign keys in mind.
+4. Any other relevant tasks mentioned in the project objectives.
+
+First, let's examine the contents of the uploaded CSV file to identify potential tables and columns.
+
+I'll load and display the CSV file to understand its structure.
+
+The CSV file contains the following columns:
+
+- Item num
+- description
+- quantity on-hand
+- cost
+- purchase date
+- vendor
+- price
+- date sold
+- cust
+- Quantity
+- item type
+- Location
+- Unit
+
+From this data, we can infer potential tables and columns for the database. Here's a possible relational structure:
+
+1. *Items*
+   - item_id (primary key)
+   - description
+   - quantity_on_hand
+   - cost
+   - purchase_date
+   - vendor_id (foreign key)
+   - item_type
+   - location
+   - unit
+
+2. *Vendors*
+   - vendor_id (primary key)
+   - vendor_name
+   - vendor_address
+
+3. *Sales*
+   - sale_id (primary key)
+   - item_id (foreign key)
+   - price
+   - date_sold
+   - customer_id (foreign key)
+   - quantity_sold
+
+4. *Customers*
+   - customer_id (primary key)
+   - customer_name (if available)
+
